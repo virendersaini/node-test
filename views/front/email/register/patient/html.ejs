@@ -1,0 +1,25 @@
+<%-include('../../header.ejs')%>
+<% var textAlignProp = data.lang === 'ar' ? 'right' : 'left'; %>
+<tr bgcolor="#ffffff">
+	<td valign="top" align="center" style="font-size: 40px; font-weight: bold;color: #01afc7;font-family: arial;padding-top: 20px;">
+		<%=__('Welcome To WIKICARE')%>
+	</td>
+</tr>
+<tr bgcolor="#ffffff">
+	<td valign="top" align="left" style="font-size: 15px;color: #000000;font-family: arial;text-transform: uppercase;padding-top: 20px;padding-bottom: 5px;font-weight: bold;padding-left: 15px; padding-right: 15px; text-align: <%= textAlignProp %>;">
+		<%=__('Hello')%> <%=data.fullname%>,
+	</td>
+</tr>
+<tr bgcolor="#ffffff">
+	<td valign="top" align="left" style="font-size: 15px;color: #000000;font-family: arial;font-weight: 400;padding:5px 15px;">
+		<p  style="margin: 0; line-height: 22px; text-align: <%= textAlignProp %>"><%=__('It is our pleasure to have you on wikicare.')%></p>
+	</td>
+</tr>
+
+
+<tr bgcolor="#ffffff">
+	<td valign="top" align="left" style="font-size: 15px;color: #000000;font-family: arial;font-weight: 400;padding:5px 15px;">
+		<p style="margin-top: 0; line-height: 22px; text-align: <%= textAlignProp %>"><%=__('For any further assistance, please contact wikicare team- we will be always happy to assist you.')%></p>
+	</td>
+</tr>
+<%-include('../../footer.ejs')%>

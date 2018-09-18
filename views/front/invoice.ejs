@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Wikicare Invoice">
+	<meta name="author" content="Wikicare Invoice">
+	<title>Wikicare Invoice</title>
+	<style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+			background: #ccc;
+			font-size: 14px;
+			line-height: 22px;
+			color: #000;
+			direction: <% if(lang === 'ar') { %>rtl<% } else { %>ltr<% } %>;
+			font-family: arial;
+		}
+		<% if(lang === 'ar') { %>
+			body table tr td, body table tr th {text-align: right !important;}
+			.inv-text-td {text-align: left !important;}
+			.cvtb table tr td, body table tr th {text-align: right !important;}
+		<% } %>
+		
+	</style>
+</head>
+<body>
+	<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="padding: 50px; background: #fff;">
+		<tr>
+			<td>
+				<table width="100%" border="0" align="center" style="border-bottom: 1px solid #000; padding: 0 0 25px;">
+					<tr>
+						<td align="left" valign="top" style="width: 220px;">
+							<img src="https://www.wikicare.co/img/logo.png" style="width: 125px;">
+						</td>
+						<td align="left" valign="top" style="width: 330px;">
+							<span style="font-size:20px;">Wikicare</span>
+							<br> <%=__('Prince Bandar Bin Abdul Aziz St')%>
+							<br> <%=__('Riyadh, Saudi Arabia')%>
+							<br>
+							<br> <span dir="ltr">00966 5 36 235235</span>
+							<br> info@wikicare.co
+						</td>
+						<td align="right" class="inv-text-td" valign="top" style="font-size:24px; font-weight: bold;">
+							<%= __('Invoice') %>
+						</td>
+					</tr>
+				</table>
+				<table width="100%" border="0" align="center" style="border-top: 1px solid #000; padding: 25px 0; margin: 1px 0 0;">
+					<tr>
+						<td align="left" valign="top" style="width: 50%;">
+							<table class="cvtb" width="100%" border="0" align="center">
+								<tr>
+									<td align="left" valign="top" style="width: 25%; font-weight: bold;">
+										<%=__('Bill To')%>
+									</td>
+									<td align="left" valign="top" style="width: 70%;">
+										<%=data.name%>
+										<br><%=data.patient.patientdetails.length ? data.patient.patientdetails[0].address:'' %>
+										<br>
+										<%=(data.patient.city && data.patient.city.citydetails.length) ? data.patient.city.citydetails[0].name+', ':'' %>
+										<%=(data.patient.state && data.patient.state.statedetails.length) ? data.patient.state.statedetails[0].name:'' %> 
+										<%=data.patient.zipcode%>
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td align="right" valign="top" style="width: 50%;">
+							<table border="0" align="right">
+								<tr>
+									<td align="right" valign="top" style="width: 200px; font-weight: bold;">
+										<%=__('Invoice Number')%>:
+									</td>
+									<td align="right" valign="top" style="width: 100px;">
+										<%=data.transactionId%>
+									</td>
+								</tr>
+								<tr>
+									<td align="right" valign="top" style="width: 120px; font-weight: bold;">
+										<%=__('Date')%>:
+									</td>
+									<td align="right" valign="top" style="width: 100px;">
+										<%=moment(data.createdAt).format('YYYY-MM-DD')%>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+				<table width="100%" border="1" align="center" cellpadding="5" cellspacing="0">
+					<tr>
+						<th align="left" valign="top" style="width: 68%; background: #f4f4f4;">
+							<%=__('Description')%>
+						</th>
+						<th align="left" valign="top" style="width: 14%; background: #f4f4f4;" >         
+							<%=__('Price')%>
+						</th>
+						<th align="left " valign="top " style="width: 18%; background: #f4f4f4;">
+							<%=__('Amount')%>
+						</th>
+					</tr>
+					<tr>
+						<td align="left" valign="top">
+							<%=__('Chat Consult with Dr.')%> <%=data.doctorprofile.doctorprofiledetails[0].name%>
+							<br> <%=__('Chat Consult Id')%>: <%=data.id%>
+							<br> <%=__('Problem Type')%>: <%=data.tag.tagdetails[0].title%>
+							<br> <%=__('Title')%>: <%=data.title%>
+						</td>
+						<td align="left" valign="top">
+							<%=currency+data.amount%>
+						</td>
+						<td align="left" valign="top">
+							<%=currency+data.amount%>
+						</td>
+					</tr>
+				</table>
+				<table width="100%" border="0" align="center" cellpadding="5" cellspacing="0">
+					<tr>
+						<td align="left" valign="top" style="width: 68%;">
+
+						</td>
+						<td style="width: 14%; font-weight: bold; border-bottom: 1px solid #666;" align="left" valign="top">
+							<%=__('Total')%>
+						</td>
+						<td style="width: 18%; border-bottom: 1px solid #666;" align="left" valign="top">
+							<%=currency+data.amount%>
+						</td>
+					</tr>
+				</table>
+				<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" style="margin: 60px 0 0;">
+					<tr>
+						<td align="left" valign="top" style="width: 100%;">
+							<strong><%=__('Terms & Conditions')%>:</strong>
+							<ol style="padding: 0 0 0 15px;">
+								<li><%=__('7 Days Free follow up')%></li>
+								<li><%=__('Chat Open upto 24 Hours')%></li>
+								<li><%=__('100% secure & private chat')%></li>
+							</ol>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+<script type="text/javascript">
+	document.body.style.zoom = 0.75;
+</script>
+</body>
+</html>

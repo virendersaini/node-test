@@ -1,0 +1,43 @@
+{
+  "development": {
+    "username": "nactus",
+    "password": "nactus",
+    "database": "wikicare",
+    "host": "192.168.100.159",
+    "dialect": "mysql",
+    "dialectOptions": {
+      "charset": "utf8mb4"
+    },
+    "msg91AuthKey": "138408AafWEW1cQyP5887191d",
+    "messageBirdKey": "6b0ynM15eCYiARTWkOTkwZ0yv",
+    "bitlyAuthKey": "0b599f3b030940b0158f1c06c9e074c9d334d1ce",
+    "notificationApiKey": "AIzaSyDbuofs4dMubEcRYjWfljCZVad_tP6lV34",
+    "ticketAdminEmail": "gaurav@planetwebsolution.com"
+  },
+  "test": {
+   "username": "nactus",
+    "password": "nactus",
+    "database": "wikicare",
+    "host": "192.168.100.159",
+    "dialect": "mysql",
+    "dialectOptions": {
+      "charset": "utf8mb4"
+    }
+  },
+  "production": {
+    "username": "nactus",
+    "password": "nactus",
+    "database": "wikicare",
+    "host": "192.168.100.159",
+    "dialect": "mysql",
+    "dialectOptions": {
+      "charset": "utf8mb4"
+    }
+  },
+  "mail": {
+    "from":"support@pateast.com",
+    "config":"smtps://hemant.suman%40planetwebsolution.com:hemant1234@smtp.gmail.com",
+    "sendGridApiKey": "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",
+    "contactEmail": "gaurav@planetwebsolution.com"
+  }
+}

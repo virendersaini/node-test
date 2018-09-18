@@ -1,0 +1,4 @@
+<%
+let time = moment().startOf('day').seconds(time_sec).format('h:mm a');
+-%>
+<%=__("Hello Doc, New appointment {{appointmentId}} has been booked successfully for {{date}} at {{time}} with {{patient_name}},{{mobile}}, please confirm the appointment.", {appointmentId, date, time, patient_name, mobile})%>

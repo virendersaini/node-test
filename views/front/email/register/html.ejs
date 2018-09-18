@@ -1,0 +1,43 @@
+<%-include('../header.ejs')%>
+<tr bgcolor="#ffffff">
+	<td valign="top" align="center" style="font-size: 40px; font-weight: bold;color: #01afc7;font-family: arial;padding-top: 20px;">
+		<%=__('Welcome To WIKICARE')%>
+	</td>
+</tr>
+<tr bgcolor="#ffffff">
+	<td valign="top" align="center" style="font-size: 15px;color: #01afc7;font-family: arial;text-transform: uppercase;padding:5px 15px;font-weight: 400">
+		<%=__('A complete Solution for your practice')%>
+	</td>
+</tr>
+<tr bgcolor="#ffffff">
+	<td valign="top" align="center" style="font-size: 15px;color: #01afc7;font-family: arial;text-transform: uppercase;padding:5px 15px;font-weight: 400">
+		<%=__('Hello')%> <%=data.fullname%>,
+	</td>
+</tr>
+<tr bgcolor="#ffffff">
+	<td valign="top" align="left" style="font-size: 15px;color: #000000;font-family: arial;font-weight: 400;padding:5px 15px;">
+		<p  style="margin: 0; line-height: 22px;"><%=__('It is our pleasure to have you on wikicare. With help of Wikicare you can make your practice more easy and enhance your online presence by deliverying best and quick knowledge with WEB and MOBILE Apps.')%></p>
+	</td>
+</tr>
+
+<tr bgcolor="#ffffff">
+	<td valign="top" align="left" style="font-size: 15px;color: #000000;font-family: arial;font-weight: 400;padding:5px 15px;">
+		<p style="margin-top: 0; line-height: 22px;"><%=__('You can also access your wikicare account anytime, anywhere with WikiCare Doctor app for your mobile from either (Google) play store or (iOS) app store')%> - </p>
+		<a href="#" style="display: inline-block; color: #01afc7; text-decoration: none; max-width: 150px"><img src="https://www.wikicare.co/img/google-play.jpg" alt="" hspace="0" vspace="0" border="0" style="display: inline-block; max-width: 100% !important; margin:10px auto; padding:0px;"/></a>
+		<a href="#" style="display: inline-block; color: #01afc7; text-decoration: none; max-width: 150px"><img src="https://www.wikicare.co/img/app-store.jpg" alt="" hspace="0" vspace="0" border="0" style="display: inline-block; max-width: 100% !important; margin:10px auto; padding:0px;"/></a>
+	</td>
+</tr>
+
+<tr bgcolor="#ffffff">
+	<td valign="top" align="left" style="font-size: 15px;color: #000000;font-family: arial;font-weight: 400;padding:5px 15px;">
+		<p style="margin-top: 0; line-height: 22px;"><%=__('To Login in to the application & website followings are the details')%>:-</p>
+		<p style="margin-top: 0; line-height: 22px;"><%=__('Application URL')%>- <a href="https://wikicare.co" style="color: #01afc7;">https://wikicare.co</a> <br />
+		<%=__('your username- You can use your email')%> <%=data.email%> <%=__('or Mobile No')%> <%=data.mobile%> <br /> <%=__('your password')%>- <%=data.password%></p>
+		<p style="margin-top: 0;  line-height: 22px;"><%=__('Please Note to login using email ID, please verify the email id using below link')%>:</p>
+		<p style="margin-top: 0;">
+			<a href="<%- data.link %>" style="display: block; padding: 8px 20px;text-align: center; border-radius: 5px; color: #ffffff; background: #01afc7; max-width: 100px;text-decoration: none; font-weight: bold; font-size: 14px;margin: 10px 0; text-transform: uppercase"><%=__('verify now')%></a>
+		</p>
+		<p style="margin-top: 0; line-height: 22px;"><%=__('For any further assistance, please contact wikicare team- we will be always happy to assist you.')%></p>
+	</td>
+</tr>
+<%-include('../footer.ejs')%>

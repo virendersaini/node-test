@@ -1,0 +1,4 @@
+<%
+let time = moment().startOf('day').seconds(time_sec).format('h:mm a');
+-%>
+<%=__("Your booking request No. {{appointmentId}} on {{date}} in {{time}} with {{doctor_name}} at Clinic / Hospital {{clinic_name}} has been submitted and waiting for doctor confirmation.", {appointmentId, date, time, doctor_name, clinic_name})%>

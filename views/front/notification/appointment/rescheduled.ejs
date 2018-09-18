@@ -1,0 +1,4 @@
+<%
+let time = moment().startOf('day').seconds(time_sec).format('h:mm a');
+-%>
+<%=__("Hello Doc, Appointment ID {{old_appointmentId}} has been rescheduled with new Appointment ID {{appointmentId}} for {{date}} at {{time}} by {{patient_name}},{{mobile}}, please confirm the new appointment.", {old_appointmentId, appointmentId, date, time, patient_name, mobile})%>

@@ -1,0 +1,5 @@
+<%if(leavestatus == 1) { %>
+<%=__('Your leave has been approved from {{start_date}} to {{end_date}}', {start_date: start_date, end_date: end_date})%>.
+<% } else if (leavestatus == 2){%>
+<%=__('Your leave has been canceled from {{start_date}} to {{end_date}}', {start_date: start_date, end_date: end_date})%>.
+<% } %>

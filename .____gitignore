@@ -1,0 +1,9 @@
+/bin
+/config/config.json
+/npm-debug.log
+/locales
+/app.js
+/node_modules
+/public/uploads
+/public/doc
+/apidoc

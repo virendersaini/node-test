@@ -1,0 +1,5 @@
+<%
+let time = moment().startOf('day').seconds(time_sec).format('h:mm a');
+date = moment(date).format('YYYY-MM-DD');
+-%>
+<%=__("Cancelled by you, Appointment ID:{{appointmentId}} for {{date}} at {{time}} with {{doctor_name}}.", {appointmentId, appointmentId, date, time, doctor_name})%>

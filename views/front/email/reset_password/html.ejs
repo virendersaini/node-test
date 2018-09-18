@@ -1,0 +1,6 @@
+<%-include('../header.ejs')%>
+<h3><%=__('Welcome')%> <%= data.fullname %></h3>
+<%=__('Username') %> <%=data.username%>
+<h4><%=__('Click below link to reset your password')%></h4>
+<a href="<%= data.link %>"><%=__('Reset Password')%></a>
+<%-include('../footer.ejs')%>

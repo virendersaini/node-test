@@ -1,0 +1,36 @@
+<%-include('../../header.ejs')%>
+<% var textAlignProp = data.lang === 'ar' ? 'right' : 'left'; %>
+<tr bgcolor="#ffffff">
+	<td valign="top" align="center" style="font-size: 40px; font-weight: bold;color: #01afc7;font-family: arial;padding-top: 20px;">
+		<%=__('Welcome To WIKICARE')%>
+	</td>
+</tr>
+<tr bgcolor="#ffffff">
+	<td valign="top" align="center" style="font-size: 15px;color: #01afc7;font-family: arial;text-transform: uppercase;padding:5px 15px;font-weight: 400">
+		<%=__('A complete Solution for your practice')%>
+	</td>
+</tr>
+<tr bgcolor="#ffffff">
+	<td valign="top" align="left" style="font-size: 15px;color: #000000;font-family: arial;text-transform: uppercase;padding-top: 20px;padding-bottom: 5px;font-weight: bold;padding-left: 15px; padding-right: 15px; text-align: <%= textAlignProp %>;">
+		<%=__('Hello')%> <%=data.fullname%>,
+	</td>
+</tr>
+<tr bgcolor="#ffffff">
+	<td valign="top" align="left" style="font-size: 15px;color: #000000;font-family: arial;font-weight: 400;padding:5px 15px;">
+		<p  style="margin: 0; line-height: 22px; text-align: <%= textAlignProp %>"><%=__('It is our pleasure to have you on wikicare. With help of Wikicare you can make your practice more easy and enhance your online presence by deliverying best and quick knowledge with WEB and MOBILE Apps.')%></p>
+	</td>
+</tr>
+
+<tr bgcolor="#ffffff">
+	<td valign="top" align="left" style="font-size: 15px;color: #000000;font-family: arial;font-weight: 400;padding:5px 15px;">
+		<p style="margin-top: 0; line-height: 22px; text-align: <%= textAlignProp %>"><%=__('To Login please follow the link below and use below login Credentials')%>:-</p>
+		<p style="margin-top: 0; line-height: 22px; text-align: <%= textAlignProp %>"><%=__('Application URL')%>- <a href="https://providers.wikicare.co" style="color: #01afc7;">https://providers.wikicare.co</a> <br />
+		<%=__('your username - ')%> <%=data.email%> / <%=data.mobile%> <br /> <%=__('your password')%>- <%=data.password%></p>
+		<p style="margin-top: 0;  line-height: 22px; text-align: <%= textAlignProp %>"><%=__('Please Note to login using email ID, please verify the email id using below link')%>:</p>
+		<p style="margin-top: 0; text-align: <%= textAlignProp %>">
+			<a href="<%- data.link %>" style="display: block; padding: 8px 20px;text-align: center; border-radius: 5px; color: #ffffff; background: #01afc7; max-width: 100px;text-decoration: none; font-weight: bold; font-size: 14px;margin: 10px 0; text-transform: uppercase"><%=__('verify now')%></a>
+		</p>
+		<p style="margin-top: 0; line-height: 22px; text-align: <%= textAlignProp %>"><%=__('For any further assistance, please contact wikicare team- we will be always happy to assist you.')%></p>
+	</td>
+</tr>
+<%-include('../../footer.ejs')%>
